@@ -1,6 +1,6 @@
 # A star algorithm + map generator
 ## Map  
-<img align="right" width="50%" height="50%" src="img/file.png">
+<img align="right" width="40%" height="40%" src="img/file.png">
 
 |Block|Color in map|Character in file|
 |:---:|:---:|:---:|
