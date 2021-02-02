@@ -1,6 +1,6 @@
 # A star algorithm + map generator
 ## Map  
-<img align="right" width="300" height="300" src="img/file.png">
+<img align="right" width="50%" height="50%" src="img/file.png">
 
 |Block|Color in map|Character in file|
 |:---:|:---:|:---:|
@@ -19,7 +19,7 @@
     Program will create randomly generated map and try to solve the map.  
     If the map isn't solvable, it generates new one and tryes again.  
     This continues until a randomly generated map is successfully solved.  
-    ```python find-point.py map-name.txt```
+    ```python find-point.py```
 
 |Proccess of finding a solution|Solution found|
 |:--:|:--:|
