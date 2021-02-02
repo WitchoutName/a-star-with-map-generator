@@ -1,8 +1,26 @@
-<h1>A star algorithm + map generator</h1>
-<ol>
-    <li>
-        <h4>Run with map parameter</h4>
-        <p>Find shortest path from "%" to "@" on a given map.</p>
-        `python find-point.py map-name.txt`
-    </li>
-</ol>
+# A star algorithm + map generator
+## Map  
+<img align="right" width="300" height="300" src="img/file.png">
+
+|Block|Color in map|Character in file|
+|:---:|:---:|:---:|
+|Start / Found end|![finding](img/start.png)|%
+|Explored space|![finding](img/explored.png)|/
+|End|![finding](img/end.png)|@
+|Free space|![finding](img/free.png)|.
+|Block|![finding](img/block.png)|X
+
+## Run program
+1. ### Run with map parameter
+    Find shortest path from "%" to "@" on a given map.  
+    ```python find-point.py map-name.txt```
+
+2. ### Run with no parameter
+    Program will create randomly generated map and try to solve the map.  
+    If the map isn't solvable, it generates new one and tryes again.  
+    This continues until a randomly generated map is successfully solved.  
+    ```python find-point.py map-name.txt```
+
+|Proccess of finding a solution|Solution found|
+|:--:|:--:|
+|![finding](img/finding.png)|![path](img/path.png)|

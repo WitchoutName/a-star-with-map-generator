@@ -115,13 +115,14 @@ class Car:
 
     def render_node(self, node, sign):
         m = WINDOW_SIZE[0] / self.map.matrix.shape[0]
-        text_surface = self.font.render(f"{math.floor(node.get_distance(self.map.dump) * 10) / 10} {node.index}",
-                                        False, (0, 0, 0))
-        sign_surface = self.font.render(f"{node.branch} {sign_of_dir[node.direction]}", False, (0, 0, 0))
         color = color_of_object[sign]
         pygame.draw.rect(self.image, color, (node.pos[1] * m, node.pos[0] * m, m, m))
-        self.image.blit(text_surface, (node.pos[1] * m, node.pos[0] * m))
-        self.image.blit(sign_surface, (node.pos[1] * m, node.pos[0] * m + m / 2))
+        if RENDER_DATA:
+            text_surface = self.font.render(f"{math.floor(node.get_distance(self.map.dump) * 10) / 10} {node.index}",
+                                        False, (0, 0, 0))
+            sign_surface = self.font.render(f"{node.branch} {sign_of_dir[node.direction]}", False, (0, 0, 0))
+            self.image.blit(text_surface, (node.pos[1] * m, node.pos[0] * m))
+            self.image.blit(sign_surface, (node.pos[1] * m, node.pos[0] * m + m / 2))
 
     def get_path_nodes(self):
         final_list = [self.end]
